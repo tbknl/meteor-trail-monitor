@@ -3,7 +3,7 @@
 	"description": "Monitor for Trail log messages",
 	"homepage": "https://github.com/tbknl/meteor-trail-monitor",
 	"author": "Dave van Soest (dave.soest@gfk.com)",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"git": "https://github.com/tbknl/meteor-trail-monitor.git",
 	"packages": {
 		"trail": "0.1.1"
