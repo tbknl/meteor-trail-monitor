@@ -71,6 +71,10 @@ Template.trail_monitor_console.large = function() {
 
 
 Template.trail_monitor_console.monitors = function() {
+    if (!Trail.Settings.Config.monitor) {
+        return [];
+    }
+
     var monitorName = Session.get('trail_monitor_console:monitor_name');
     var monitorItems = Trail.Instance.monitorManager.getMonitorNamesReactive().map(function(item) {
         if (monitorName === null) {
@@ -93,6 +97,10 @@ Template.trail_monitor_console.monitors = function() {
 
 
 Template['trail_monitor_console-items'].items = function() {
+    if (!Trail.Settings.Config.monitor) {
+        return [];
+    }
+
     var monitorName = Session.get('trail_monitor_console:monitor_name'),
         monitor = Trail.Instance.monitorManager.getMonitorByName(monitorName);
 
