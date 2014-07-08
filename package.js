@@ -3,8 +3,10 @@ Package.describe({
 });
 
 Package.on_use(function(api) {
-    api.use(['trail'], ['server', 'client']);
-    api.use(['deps', 'session', 'templating'], ['client']); // TODO? Remove?
+    api.use('trail', ['server', 'client']);
+    api.use('deps', 'client');
+    api.use('templating', 'client');
+    api.use('session', 'client');
 
     // Allow us to detect 'insecure'.
     api.use('insecure', {weak: true});

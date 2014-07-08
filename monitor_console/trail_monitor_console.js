@@ -96,7 +96,7 @@ Template.trail_monitor_console.monitors = function() {
 };
 
 
-Template['trail_monitor_console-items'].items = function() {
+Template['trail_monitor_console__items'].items = function() {
     if (!Trail.Settings.Config.monitor) {
         return [];
     }
@@ -108,12 +108,12 @@ Template['trail_monitor_console-items'].items = function() {
 };
 
 
-Template['trail_monitor_console-items'].wrap = function() {
+Template['trail_monitor_console__items'].wrap = function() {
     return Session.get('trail_monitor_console:wrap');
 };
 
 
-Template['trail_monitor_console-items'].rendered = function() {
+Template['trail_monitor_console__items'].rendered = function() {
     // Scroll to the bottom of the items container:
     // TODO: Make a toggle button to disable this behavior.
     var itemsElem = this.find('div.trail_items');
@@ -121,17 +121,17 @@ Template['trail_monitor_console-items'].rendered = function() {
 };
 
 
-Template['trail_monitor_console-item'].isServer = function() {
+Template['trail_monitor_console__item'].isServer = function() {
     return typeof this.meta === 'object' && this.meta._origin === 'server';
 };
 
 
-Template['trail_monitor_console-item'].isOtherClient = function() {
+Template['trail_monitor_console__item'].isOtherClient = function() {
     return typeof this.meta === 'object' && this.meta._origin === 'client' && this.meta._origin_id !== Trail.Origin.id;
 };
 
 
-Template['trail_monitor_console-item'].levelText = function() {
+Template['trail_monitor_console__item'].levelText = function() {
     var lut = {
         FATAL: 'F',
         ERROR: 'E',

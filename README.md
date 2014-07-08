@@ -15,6 +15,11 @@ mrt add trail-monitor
 Note: This package is meant to be used for development purposes. It's highly recommended NOT TO USE THIS PACKAGE IN PRODUCTION systems.
 
 
+Changelog summary
+-----------------
+* 0.2.0 - Support for blaze. 
+
+
 Configuration:
 --------------
 Inside the Trail client-side settings you can enable monitors, configure the console and define your monitors. Example confiuration:

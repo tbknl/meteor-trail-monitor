@@ -8,22 +8,22 @@
         <span>Monitor:</span>&nbsp;
         <select>
             {{#each monitors}}
-                <option value="{{name}}"{{#if selected}} selected="selected"{{/if}}>{{name}}</option>
+                <option value="{{name}}" selected={{selected}}>{{name}}</option>
             {{/each}}
         </select>
     </div>
-    {{> trail_monitor_console-items}}
+    {{> trail_monitor_console__items}}
 </div>{{/if}}</template>
 
-<template name="trail_monitor_console-items">
+<template name="trail_monitor_console__items">
     <div class="trail_items{{#if wrap}} trail_wrap{{/if}}">
         {{#each items}}
-            {{> trail_monitor_console-item}}
+            {{> trail_monitor_console__item}}
         {{/each}}
     </div>
 </template>
 
-<template name="trail_monitor_console-item">
+<template name="trail_monitor_console__item">
     <div class="trail_item">
         <span class="trail_level trail_level-{{level}}">{{levelText}}</span><span class="trail_message{{#if isServer}} trail_message-server{{/if}}{{#if isOtherClient}} trail_message-other_client{{/if}}">{{message}}</span>
     </div>
